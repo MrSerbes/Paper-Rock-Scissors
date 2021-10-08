@@ -22,16 +22,17 @@ public class Main {
         int times=0,i=0;
         times=sc.nextInt();
 
-        while (i<times){
+
+        while (i<times){//while statement for the game round
             System.out.print("Enter your move : ");
             player1.setChoice(player1.playRandom());
             player2.setChoice(player2.getPlayerMove());
             System.out.println("\n"+player1.getName()+" played : "+player1.getChoise()+" ------- "+player2.getName()+" played : "+player2.getChoise());
 
-            if (player1.getChoise() == player2.getChoise())
+            if (player1.getChoise() == player2.getChoise())//if choises are same
             {
                 System.out.println("It is a tie");
-            } else {
+            } else {//if choises are not same
                 switch (player1.getChoise()) {
                     case ROCK:
                         if (player2.getChoise() == SCISSORS){
@@ -63,11 +64,11 @@ public class Main {
                             player2.earnPoints();
                         }
                         break;
-                }
-            }
-            i++;
+                }//end of switch statement
+            }//end of else statement
+            i++;//to increase the round
             System.out.println(i+". result is : "+player1.getName()+" = "+player1.getScore()+" ------- "+player2.getName()+" = "+player2.getScore()+"\n");
-        }
+        }//end of while
         System.out.println("Game result is : "+player1.getName()+" = "+player1.getScore()+" ------- "+player2.getName()+" = "+player2.getScore());
         if(player1.getScore()==player2.getScore()){
             System.out.println("The game ended in a draw");
