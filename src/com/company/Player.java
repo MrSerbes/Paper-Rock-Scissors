@@ -18,10 +18,6 @@ public class Player {
         this.name = name;
     }
 
-    public void write(){
-        System.out.println(choice.name());
-    }
-
     public void earnPoints(){
         this.score++;
     }
