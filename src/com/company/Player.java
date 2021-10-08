@@ -1,6 +1,7 @@
 package com.company;
 
 import java.security.SecureRandom;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Player {
@@ -42,7 +43,7 @@ public class Player {
         Scanner scan = new Scanner(System.in);
         while (true){
             String choice = scan.nextLine();
-            String playerChoice = choice.toUpperCase();
+            String playerChoice = choice.toUpperCase(new Locale("en","TR"));
             if(playerChoice.equals("ROCK") || playerChoice.equals("PAPER") || playerChoice.equals("SCISSORS")){
                 return Choices.valueOf(playerChoice);
             }else{
